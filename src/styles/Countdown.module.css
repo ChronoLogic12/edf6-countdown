@@ -1,27 +1,31 @@
-.headerContainer {
+.pageContainer {
 	width: 100vw;
 	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url("../public/images/202310139313778_1.jpg");
+	background-image: url("../../public/images/202310139313778_1.jpg");
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	text-align: center;
+}
+
+.headerContainer {
 }
 
 .countdownContainer {
-	width: 100vw;
-	height: 100vh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url("../public/images/202310139313778_1.jpg");
+	width: 100%;
+	height: 100%;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: flex-end;
+
+	margin-bottom: 6rem;
 }
 
 .title,
