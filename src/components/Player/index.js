@@ -26,7 +26,7 @@ export default function Player() {
 		<div className={css.player}>
 			<audio id="myAudio">Your browser does not support the audio element.</audio>
 
-			<p>Click the Play/Stop button to save our mother earth.</p>
+			<p>Click the Play/Stop button to save our mother earth!</p>
 			<button className={css.button} id="playAudio" onClick={handleAudio} type="button">
 				Play/Stop
 			</button>
