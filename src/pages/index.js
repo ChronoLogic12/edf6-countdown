@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import css from "../styles/Home.module.css";
 
-import { EDF41 } from "../../public/audio/EDF41.mp3";
-import { EDF5 } from "../../public/audio/EDF5.mp3";
-
 import { Countdown, Player } from "../components";
 
 export default function Home() {
@@ -51,6 +48,13 @@ export default function Home() {
 					intellectual property belong to their respective owners. No copyright infringement is
 					intended.
 				</small>
+				<a
+					class={css.repository}
+					href="https://github.com/ChronoLogic12/edf6-countdown"
+					target="_blank"
+					rel="noopener noreferrer">
+					<i className="fa-brands fa-github"></i> Code repository
+				</a>
 			</footer>
 
 			<style jsx global>{`
