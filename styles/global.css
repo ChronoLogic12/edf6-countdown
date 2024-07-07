@@ -1,0 +1,40 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Play", sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Play", sans-serif;
+	text-shadow: 4px 4px #000000;
+}
+
+footer {
+	background-color: #000000;
+	color: #fff;
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
