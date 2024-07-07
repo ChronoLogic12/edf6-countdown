@@ -34,10 +34,11 @@ export default (props) => {
 			</span>
 		);
 	});
-
-	return (
-		<div className={css.countdown}>
-			{timerComponents.length ? timerComponents : <p className={css.time}>EDF DEPLOY!</p>}
-		</div>
-	);
+	if (timerComponents.length) {
+		return (
+			<div className={css.countdown}>
+				{timeRemaining != 0 ? timerComponents : <p className={css.time}>EDF DEPLOY!</p>}
+			</div>
+		);
+	}
 };
