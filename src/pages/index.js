@@ -27,7 +27,7 @@ export default function Home() {
 					</h2>
 				</section>
 				<section className={styles.countdownContainer}>
-					<Countdown endDate={endDate} setEndDate={setEndDate} />
+					<Countdown endDate={endDate} />
 				</section>
 			</main>
 
