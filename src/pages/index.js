@@ -3,7 +3,10 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Countdown.module.css";
 
-import { Countdown } from "../components";
+import { EDF41 } from "../../public/audio/EDF41.mp3";
+import { EDF5 } from "../../public/audio/EDF5.mp3";
+
+import { Countdown, Player } from "../components";
 
 export default function Home() {
 	const [endDate, setEndDate] = useState("");
@@ -32,6 +35,7 @@ export default function Home() {
 			</main>
 
 			<footer>
+				<Player />
 				<a
 					href="https://store.steampowered.com/app/2291060/EARTH_DEFENSE_FORCE_6/"
 					target="_blank"
