@@ -5,7 +5,6 @@
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
 	border: 2px solid #fff;
-	box-shadow: 0px 0px -10px 10px rgb(168, 187, 233);
 }
 
 .time {
@@ -16,5 +15,11 @@
 @media only screen and (max-width: 900px) {
 	.time {
 		display: block;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.countdown {
+		background-color: rgba(0, 0, 0, 0.8);
 	}
 }
