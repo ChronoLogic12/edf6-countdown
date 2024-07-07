@@ -16,7 +16,7 @@ export default function Home() {
 		<div className={styles.container}>
 			<Head>
 				<title>EDF 6 Western PC Release Countdown</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
 			</Head>
 
 			<main className={styles.pageContainer}>
