@@ -4,14 +4,14 @@ import css from "./style.module.css";
 
 export default (props) => {
 	const calculateTimeRemaining = () => {
-		const difference = +new Date(props.endDate) - +new Date();
+		props.setTimeDifference(+new Date(props.endDate) - +new Date());
 		let timeRemaining = {};
-		if (difference > 0) {
+		if (props.timeDifference) {
 			timeRemaining = {
-				days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-				hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-				minutes: Math.floor((difference / 1000 / 60) % 60),
-				seconds: Math.floor((difference / 1000) % 60),
+				days: Math.abs(Math.floor(props.timeDifference / (1000 * 60 * 60 * 24))),
+				hours: Math.abs(Math.floor((props.timeDifference / (1000 * 60 * 60)) % 24)),
+				minutes: Math.abs(Math.floor((props.timeDifference / 1000 / 60) % 60)),
+				seconds: Math.abs(Math.floor((props.timeDifference / 1000) % 60)),
 			};
 		}
 		return timeRemaining;
@@ -27,18 +27,22 @@ export default (props) => {
 	});
 
 	const timerComponents = [];
+	let pastReleaseDate = false;
+	if (props.timeDifference < 0) {
+		pastReleaseDate = true;
+		timerComponents.push(<div className={css.time}>EDF Deploy!</div>);
+	}
+
 	Object.keys(timeRemaining).forEach((interval) => {
 		timerComponents.push(
 			<span className={css.time} key={interval}>
+				{interval == "days" && pastReleaseDate ? "-" : ""}
 				{timeRemaining[interval]} {interval}{" "}
 			</span>
 		);
 	});
+
 	if (timerComponents.length) {
-		return (
-			<div className={css.countdown}>
-				{timeRemaining != 0 ? timerComponents : <p className={css.time}>EDF DEPLOY!</p>}
-			</div>
-		);
+		return <div className={css.countdown}>{timerComponents}</div>;
 	}
 };

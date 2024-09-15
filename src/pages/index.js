@@ -7,6 +7,7 @@ import { Countdown, Player } from "../components";
 
 export default function Home() {
 	const [endDate, setEndDate] = useState("");
+	const [timeDifference, setTimeDifference] = useState("");
 
 	useEffect(() => {
 		setEndDate(new Date("july 25, 2024 00:00:00").getTime());
@@ -27,7 +28,11 @@ export default function Home() {
 					</h2>
 				</section>
 				<section className={css.countdownContainer}>
-					<Countdown endDate={endDate} />
+					<Countdown
+						endDate={endDate}
+						timeDifference={timeDifference}
+						setTimeDifference={setTimeDifference}
+					/>
 				</section>
 			</main>
 
@@ -49,7 +54,7 @@ export default function Home() {
 					intended.
 				</small>
 				<a
-					class={css.repository}
+					className={css.repository}
 					href="https://github.com/ChronoLogic12/edf6-countdown"
 					target="_blank"
 					rel="noopener noreferrer">
